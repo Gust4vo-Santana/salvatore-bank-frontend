@@ -1,10 +1,12 @@
+import Button from "../../components/atoms/button/Button"
+
 function App() {
 
   return (
     <>
-      <h1>Oi, tudo bem?</h1>
+      <Button text="Botão" onClick={() => {}}/>
     </>
   )
 }
 
-export default App
+export default App;
