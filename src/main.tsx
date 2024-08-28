@@ -23,9 +23,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <TopBar logo="/salvatore.jpg"
         links={[
           { text: "Home", href: "/" }, 
-          { text: "salve", href: "/PaginaFodase" },
-          { text: "App", href: "/" },
-          { text: "App", href: "/" },
+          { text: "About us", href: "/" },
+          { text: "Page 1", href: "/" },
+          { text: "Page 2", href: "/" },
         ]} />
       <AppRoutes />
     </Router>

@@ -4,10 +4,13 @@ interface IButtonProps {
     text: string,
     bgColor?: string,
     color?: string,
+    type?: string
     onClick: () => void,
 };
 
-const StyledButton = styled.button<{ $bgColor?: string, $color?: string }>`
+const StyledButton = styled.button.attrs<{ $bgColor?: string, $color?: string }>((props) => ({
+    type: props.type,
+}))`
     color: ${ (props) => props.$color || "#E0E0E0" };
     background-color: ${ (props) => props.$bgColor || "#2C2C2E" };
     border: 1px solid #B0B0B0;

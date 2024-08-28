@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import StyledInputWrapper from "./InputWrapper";
 import StyledLabel from "./Label";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 
 interface ISelectInputProps {
+    name: string,
     label: string,
     options: Array<{ name: string, value: string }>,
+    required?: boolean,
+    register: UseFormRegister<FieldValues>,
 }
 
 const StyledSelectInput = styled.select`
@@ -18,13 +22,13 @@ const StyledSelectInput = styled.select`
     }
 `;
 
-const SelectInput = ({ label, options }: ISelectInputProps) => {
+const SelectInput = ({ name, label, options, required, register }: ISelectInputProps) => {
     return (
         <StyledInputWrapper>
             <StyledLabel>{label}</StyledLabel>
-            <StyledSelectInput>
-                {options.map((option) => {
-                    return <option value={option.value}>{option.name}</option>
+            <StyledSelectInput { ...register(name) } required={required}>
+                {options.map((option, index) => {
+                    return <option key={index} value={option.value}>{option.name}</option>
                 })}
             </StyledSelectInput>
         </StyledInputWrapper>

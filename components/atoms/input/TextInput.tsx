@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import StyledInputWrapper from "./InputWrapper";
 import StyledLabel from "./Label";
+import { FieldValues, UseFormRegister } from "react-hook-form";
 
 interface ITextInputProps {
+    name: string,
     label: string,
     required?: boolean,
     placeholder?: string,
     defaultValue?: string,
+    register: UseFormRegister<FieldValues>,
 }
 
 const StyledTextInput = styled.input.attrs((props) => ({
@@ -25,12 +28,14 @@ const StyledTextInput = styled.input.attrs((props) => ({
     }
 `;
 
-const TextInput = ({ label, required, placeholder, defaultValue }: ITextInputProps) => {
+const TextInput = ({ name, label, required, placeholder, defaultValue, register }: ITextInputProps) => {
+
     return (
         <>
             <StyledInputWrapper>
                 <StyledLabel>{label}</StyledLabel>
-                <StyledTextInput required={required} placeholder={placeholder} defaultValue={defaultValue} />
+                <StyledTextInput { ...register(name) } required={required} 
+                placeholder={placeholder} defaultValue={defaultValue} />
             </StyledInputWrapper>
         </>
     )
