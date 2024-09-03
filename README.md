@@ -1,30 +1,56 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Salvatore Bank Frontend
 
-Currently, two official plugins are available:
+Este é o frontend de uma aplicação web dedicada a fornecer informações e análises abrangentes sobre mercado financeiro. A aplicação é construída usando tecnologias como React.js, Vite e styled-components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Índice
+- [Instalação](#instalação)
+- [Executando a Aplicação](#executando-a-aplicação)
+- [Executando os Testes](#executando-os-testes)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Contribuindo](#contribuindo)
 
-## Expanding the ESLint configuration
+## Instalação
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Gust4vo-Santana/salvatore-bank-frontend
+   cd salvatore-bank-frontend
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Instale as dependências:
+   ```bash
+   npm install
+   # ou
+   yarn
+   ```
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Executando a Aplicação
+Para iniciar o servidor de desenvolvimento, execute:
+```bash
+npm run dev
+# ou
+yarn dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Executando os Testes
+O projeto utiliza Jest e Testing Library para testes unitários. Para rodar os testes, use o seguinte comando:
+```bash
+npm run test
+# ou
+yarn test
+```
+
+## Tecnologias Utilizadas
+- **React.js**: Uma biblioteca JavaScript para construir interfaces de usuário.
+- **Vite**: Uma ferramenta de build e servidor de desenvolvimento rápido para projetos web modernos.
+- **styled-components**: Uma biblioteca para escrever CSS em JavaScript com suporte a temas.
+- **Jest**: Um framework de testes para JavaScript.
+- **Testing Library**: Um conjunto de utilitários para testar componentes React.
+
+## Contribuindo
+Contribuições são bem-vindas! Siga estas etapas para contribuir:
+1. Faça um fork do repositório.
+2. Crie uma nova branch para a sua funcionalidade ou correção de bug.
+3. Commite suas alterações com mensagens claras e descritivas.
+4. Faça push da sua branch para o repositório forkado.
+5. Abra um Pull Request para a branch principal deste repositório.
