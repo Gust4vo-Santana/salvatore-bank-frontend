@@ -13,7 +13,7 @@ function App() {
             { value: "M", name: "Homem" },
             { value: "F", name: "Mulher" },
             { value: "O", name: "Outro" },
-          ] },
+          ], required: true },
           { name: "checkbox", type: "checkbox", label: "Checkbox" },
           { name: "age", label: "Idade", type: "text" }
         ]} />

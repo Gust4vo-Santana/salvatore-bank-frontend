@@ -11,8 +11,8 @@ interface IButtonProps {
 const StyledButton = styled.button.attrs<{ $bgColor?: string, $color?: string }>((props) => ({
     type: props.type,
 }))`
-    color: ${ (props) => props.$color || "#E0E0E0" };
-    background-color: ${ (props) => props.$bgColor || "#2C2C2E" };
+    color: ${ (props) => props.$color || "#e0e0e0" };
+    background-color: ${ (props) => props.$bgColor || "#2c2c2e" };
     border: 1px solid #B0B0B0;
     border-radius: 5px;
     padding: 5px 10px;
@@ -20,8 +20,8 @@ const StyledButton = styled.button.attrs<{ $bgColor?: string, $color?: string }>
     width: fit-content;
 
     &:hover {
-        background-color: #1C1C1E;
-        color: #ffff96;
+        background-color: #1c1c1e;
+        color: rgb(255, 255, 150);
         cursor: pointer;
     }
 `;

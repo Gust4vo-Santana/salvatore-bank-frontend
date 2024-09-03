@@ -3,9 +3,7 @@ import { styled } from "styled-components";
 import TextInput from "../../atoms/input/TextInput";
 import SelectInput from "../../atoms/input/SelectInput";
 import CheckboxInput from "../../atoms/input/CheckboxInput";
-import Button from "../../atoms/button/Button";
 import { z } from "zod";
-import StyledInputWrapper from "../../atoms/input/InputWrapper";
 import SubmitInput from "../../atoms/input/SubmitInput";
 
 const FieldSchema = z.union([
@@ -34,7 +32,9 @@ interface IFormProps {
 }
 
 const StyledForm = styled.form`
-    
+    background-color: #2C2C2E;
+    padding: 1rem;
+    border-radius: 1rem;
 `;
 
 const Form = ({ onSubmit, fields }: IFormProps) => {
@@ -48,7 +48,8 @@ const Form = ({ onSubmit, fields }: IFormProps) => {
                         case "text":
                             return <TextInput key={index} register={register} name={field.name} label={field.label} required={field.required} />
                         case "select":
-                            return <SelectInput key={index} register={register} name={field.name} label={field.label} options={field.options} required={field.required} />
+                            return <SelectInput key={index} 
+                                register={register} name={field.name} label={field.label} options={field.options} required={field.required} />
                         case "checkbox":
                             return <CheckboxInput key={index} register={register} name={field.name} label={field.label} required={field.required} />
                         default: 

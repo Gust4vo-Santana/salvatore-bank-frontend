@@ -7,6 +7,7 @@ const StyledSubmitInput = styled.input.attrs({ type: "submit" })`
     background-color: #E0E0E0;
     border: none;
     border-radius: 5px;
+    padding: 5px 10px;
 `;
 
 const SubmitInput = () => {
