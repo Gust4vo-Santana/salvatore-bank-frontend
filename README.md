@@ -42,7 +42,7 @@ yarn test
 
 ## Tecnologias Utilizadas
 - **React.js**: Uma biblioteca JavaScript para construir interfaces de usuário.
-- **Vite**: Uma ferramenta de build e servidor de desenvolvimento rápido para projetos web modernos.
+- **Vite**: Uma ferramenta de build e servidor de desenvolvimento rápido para projetos web.
 - **styled-components**: Uma biblioteca para escrever CSS em JavaScript com suporte a temas.
 - **Jest**: Um framework de testes para JavaScript.
 - **Testing Library**: Um conjunto de utilitários para testar componentes React.
